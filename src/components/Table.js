@@ -6,8 +6,9 @@ function Table(props) {
   setTimeout(() => {
     setTimer(timer - 1);
   }, 1000);
+
   return (
-    <div className="container">
+    <div className="container" style={{ paddingTop: "100px" }}>
       {timer > 0 ? (
         <p>Time Left : {timer} </p>
       ) : (
@@ -27,7 +28,7 @@ function Table(props) {
         <tbody>
           {props.rows.map((row) => (
             <tr>
-              <th scope="row">1</th>
+              <th scope="row">{row.id}</th>
               <td>{row.date}</td>
               <td>{row.time}</td>
               <td>{row.availability}</td>
