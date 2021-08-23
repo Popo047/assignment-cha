@@ -20,9 +20,9 @@ function Table(props) {
         <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
+            <th scope="col">Date</th>
+            <th scope="col">Time</th>
+            <th scope="col">Availability</th>
           </tr>
         </thead>
         <tbody>
@@ -33,13 +33,24 @@ function Table(props) {
               <td>{row.time}</td>
               <td>{row.availability}</td>
               <td>
-                <button
-                  type="button"
-                  class="btn btn-primary"
-                  onClick={() => props.onchangeAv(row.id)}
-                >
-                  Book Now
-                </button>
+                {row.availability > 0 ? (
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    onClick={() => props.onchangeAv(row.id)}
+                  >
+                    Book Now
+                  </button>
+                ) : (
+                  <button
+                    type="button"
+                    disabled
+                    class="btn btn-primary"
+                    onClick={() => props.onchangeAv(row.id)}
+                  >
+                    Full
+                  </button>
+                )}
               </td>
             </tr>
           ))}
