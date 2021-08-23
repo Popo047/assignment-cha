@@ -54,7 +54,7 @@ function Table(props) {
                   <button
                     type="button"
                     disabled
-                    className="btn btn-primary"
+                    className="btn btn-danger"
                     onClick={() => props.onchangeAv(row.id)}
                   >
                     Full
