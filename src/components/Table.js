@@ -10,12 +10,19 @@ function Table(props) {
   return (
     <div className="container" style={{ paddingTop: "100px" }}>
       {timer > 0 ? (
-        <p>Time Left : {timer} </p>
+        <p style={{ textAlign: "left" }}>
+          <strong>Time Left : {timer} </strong>
+        </p>
       ) : (
-        <p>Time is Up Please Refresh</p>
+        <p style={{ textAlign: "left", color: "orange" }}>
+          <strong>Time is Up Please Refresh</strong>
+        </p>
       )}
 
-      <h1>Claim your seats</h1>
+      <h2 style={{ textAlign: "left", color: "orange" }}>
+        Claim your Free Trial Class
+      </h2>
+      <h3 style={{ textAlign: "left" }}>Class Schedule</h3>
       <table class="table">
         <thead>
           <tr>
@@ -31,7 +38,9 @@ function Table(props) {
               <th scope="row">{row.id}</th>
               <td>{row.date}</td>
               <td>{row.time}</td>
-              <td>{row.availability}</td>
+              <td>
+                <strong>{row.availability} </strong> Seats Available
+              </td>
               <td>
                 {row.availability > 0 ? (
                   <button
