@@ -34,6 +34,11 @@ function App() {
     setData(newData);
   };
 
+  const cancelHandler = (id) => {
+    const filteredData = data.filter((row) => row.id !== id);
+    setData(filteredData);
+  };
+
   return (
     <BrowserRouter>
       <Navbar />
@@ -42,7 +47,9 @@ function App() {
           <Route exact path="/">
             <Main rows={data} onchangeAv={changeAvHandler} />
           </Route>
-          <Route path="/cart" component={Cart} />
+          <Route path="/cart">
+            <Cart rows={data} onChangeCart={cancelHandler} />
+          </Route>
         </div>
       </Switch>
     </BrowserRouter>
