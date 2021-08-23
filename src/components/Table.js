@@ -36,7 +36,7 @@ function Table(props) {
                 {row.availability > 0 ? (
                   <button
                     type="button"
-                    class="btn btn-primary"
+                    className="btn btn-primary"
                     onClick={() => props.onchangeAv(row.id)}
                   >
                     Book Now
@@ -45,7 +45,7 @@ function Table(props) {
                   <button
                     type="button"
                     disabled
-                    class="btn btn-primary"
+                    className="btn btn-primary"
                     onClick={() => props.onchangeAv(row.id)}
                   >
                     Full
