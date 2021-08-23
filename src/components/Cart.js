@@ -4,7 +4,7 @@ function Cart(props) {
   console.log(props.rows);
   return (
     <div className="container">
-      <table class="table">
+      <table className="table">
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -16,7 +16,7 @@ function Cart(props) {
         <tbody>
           {props.rows.map((row) =>
             row.status ? (
-              <tr>
+              <tr key={row.id}>
                 <th scope="row">{row.id}</th>
                 <td>{row.date}</td>
                 <td>{row.time}</td>

@@ -14,17 +14,17 @@ function Table(props) {
           <strong>Time Left : {timer} </strong>
         </p>
       ) : (
-        <p style={{ textAlign: "left", color: "orange" }}>
+        <p style={{ textAlign: "left", color: "#ff3300" }}>
           <strong>Time is Up Please Refresh</strong>
         </p>
       )}
 
-      <h2 style={{ textAlign: "left", color: "orange" }}>
+      <h2 style={{ textAlign: "left", color: "#ff3300" }}>
         Claim your Free Trial Class
       </h2>
       <h3 style={{ textAlign: "left" }}>Class Schedule</h3>
-      <table class="table">
-        <thead>
+      <table className="table">
+        <thead style={{ backgroundColor: "#000099", color: "white" }}>
           <tr>
             <th scope="col">#</th>
             <th scope="col">Date</th>
@@ -34,7 +34,7 @@ function Table(props) {
         </thead>
         <tbody>
           {props.rows.map((row) => (
-            <tr>
+            <tr key={row.id}>
               <th scope="row">{row.id}</th>
               <td>{row.date}</td>
               <td>{row.time}</td>

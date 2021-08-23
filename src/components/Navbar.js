@@ -12,7 +12,7 @@ function Navbar() {
                 Home
               </Link>
             </li>
-            <li className="nav-item">
+            <li className="nav-item" style={{ justifyItems: "flex-end" }}>
               <Link className="nav-link" to="/cart">
                 Cart
               </Link>
